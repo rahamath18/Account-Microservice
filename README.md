@@ -1,4 +1,4 @@
-## Account Microservice Example Development using SpringBoot 2.2.2 and Hibernate 5.1.0
+## Account Microservice Example Development using SpringBoot 2.2.2, Hibernate 5.1.0 and MySql 5.7.12
 
 
 ### Used technology stack in this example
