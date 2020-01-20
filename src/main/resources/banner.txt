@@ -3,9 +3,15 @@
 
 
 
-			Account Microservice Development using SpringBoot 2.2.2
+			Account Microservice Development using 
 			
-			####################################################
+				1. SpringBoot 2.2.2
+					
+				2. Hibernate 5.1.0
+					
+				3. ySql 5.7.12
+			
+			######################################
 							
 							
 							
