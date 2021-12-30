@@ -1,4 +1,4 @@
-## Account Microservice Example Development using SpringBoot 2.2.2, Hibernate 5.1.0 and MySql 5.7.12
+## Account Microservice Example Development using SpringBoot 2.2.2, Hibernate 5.1.0, MySql 5.7.12, PostgreSQL 12.9-1, and Oracle 19.3 (19c)
 
 
 ### Used technology stack in this example
@@ -9,14 +9,24 @@
 	4. Hibernate Annotations 5.1.0
 	5. Hibernate Core 5.4.9
 	6. Hibernate Validator 6.0.18
-	7. MySql 5.7.12
-	8. Postman Version 7.14.0
+	7. MySql 8.0.27
+	8. PostgreSQL 12.9-1
+	9. Oracle 19.3 (19c)
+	10. Postman Version 8.12.5
 
 
 ### Use following URL to create spring boot initial application structure
 
 	https://start.spring.io/
 
+
+### This example work with MySQL, PostgreSQL, and Oracle
+
+	- Only modify the application.properties to work with your database.
+	- Create DB user name as "account" before run this example for oracle 19c
+	- Create DB user name as "postgres" (default) before run this example for PostgreSQL
+	- Create DB user name as "root" (default) before run this example for MySQL
+	
 
 ### Maven initial setup
 
@@ -28,7 +38,7 @@
 
 	$ mvn spring-boot:run
 	
-	Browse	http://localhost:3001/account/
+	Browse	http://localhost:3001/account-microservice/
 
 
 ### Build application jar or war
@@ -50,18 +60,23 @@
 	$ java -jar target/Account-Microservice-1.0-PROD.jar
 	
 	Browse	http://localhost:3001
+	
+	
+### Import the following POSTMAN collection into your postman tool
+	
+	Account Microservice.postman_collection.json
 
 
 ### Test Case 1: Account Sign-Up URL in POSTMAN
 
-	Request: http://localhost:3001/account/sign-up?userName=rahamath18&password=pass1234
+	Request: http://localhost:3001/account-microservice/sign-up?userName=rahamath18&password=pass1234
 	
 	Response: {"message":"Your Sign-Up is successful"}
 
 
 ### Test Case 2: Account Sign-In URL test in POSTMAN
 
-	Request: http://localhost:3001/account/sign-in?userName=rahamath18&password=pass1234
+	Request: http://localhost:3001/account-microservice/sign-in?userName=rahamath18&password=pass1234
 
 	Response: {"message":"Your Sign-In is successful","token":" 4d2h1n4g3g0k"}
 
